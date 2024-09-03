@@ -25,17 +25,17 @@ https://github.com/gazebosim/ros_gz/tree/ros2/ros_gz_bridge
 ### 1a camera:
 Em outro terminal:
 Visualizar a imagem da camera:
-> ros2 run ros_gz_bridge parameter_bridge /world/empty/model/rgbd_camera/link/link/sensor/camera_sensor/image@sensor_msgs/msg/Image@gz.msgs.Image
+> ros2 run ros_gz_bridge parameter_bridge /world/empty/model/rgbd_camera/link/link/sensor/camera_sensor/image@sensor_msgs/msg/Image@gz.msgs.Image --ros-args --remap __node:=camera_1_bridge
 
 ### 2a camera:
 Em outro terminal:
 Visualizar a imagem da camera:
-> ros2 run ros_gz_bridge parameter_bridge /world/empty/model/rgbd_camera_1/link/link_1/sensor/camera_sensor_1/image@sensor_msgs/msg/Image@gz.msgs.Image
+> ros2 run ros_gz_bridge parameter_bridge /world/empty/model/rgbd_camera_1/link/link_1/sensor/camera_sensor_1/image@sensor_msgs/msg/Image@gz.msgs.Image --ros-args --remap __node:=camera_2_bridge
 
 ### 3a camera:
 Em outro terminal:
 Visualizar a imagem da camera:
-> ros2 run ros_gz_bridge parameter_bridge /world/empty/model/rgbd_camera_2/link/link_2/sensor/camera_sensor_2/image@sensor_msgs/msg/Image@gz.msgs.Image
+> ros2 run ros_gz_bridge parameter_bridge /world/empty/model/rgbd_camera_2/link/link_2/sensor/camera_sensor_2/image@sensor_msgs/msg/Image@gz.msgs.Image --ros-args --remap __node:=camera_3_bridge
 
 ### Visualizar no rviz:
 > ros2 run rqt_image_view rqt_image_view /world/empty/model/rgbd_camera_1/link/link_1/sensor/camera_sensor_1/image
