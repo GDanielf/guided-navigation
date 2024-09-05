@@ -9,7 +9,8 @@
     <plugin name='gz::sim::systems::UserCommands' filename='ignition-gazebo-user-commands-system'/>
     <plugin name='gz::sim::systems::SceneBroadcaster' filename='ignition-gazebo-scene-broadcaster-system'/>
     <plugin name='gz::sim::systems::Contact' filename='ignition-gazebo-contact-system'/>
-    <plugin name='gz::sim::systems::Sensors' filename='ignition-gazebo6-sensors-system'/>    
+    <plugin name='gz::sim::systems::Sensors' filename='ignition-gazebo6-sensors-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='ignition-gazebo-user-commands-system'/>
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
@@ -26,7 +27,7 @@
         <wheel_radius>0.1651</wheel_radius>
         <odom_publish_frequency>1</odom_publish_frequency>
         <topic>cmd_vel</topic>
-        </plugin>
+      </plugin>
       <link name='base_link'>
         <inertial>
           <pose>0 0 0.13228 0 -0 0</pose>
@@ -695,7 +696,7 @@
           <topic>__default__</topic>
           <update_rate>30</update_rate>
           <enable_metrics>false</enable_metrics>
-          <camera>
+          <camera name='__default__'>
             <pose>0 0 0 0 -0 0</pose>
             <horizontal_fov>1.0469999999999999</horizontal_fov>
             <image>
@@ -800,7 +801,7 @@
           <topic>__default__</topic>
           <update_rate>30</update_rate>
           <enable_metrics>false</enable_metrics>
-          <camera>
+          <camera name='__default__'>
             <pose>0 0 0 0 -0 0</pose>
             <horizontal_fov>1.0469999999999999</horizontal_fov>
             <image>
@@ -905,7 +906,7 @@
           <topic>__default__</topic>
           <update_rate>30</update_rate>
           <enable_metrics>false</enable_metrics>
-          <camera>
+          <camera name='__default__'>
             <pose>0 0 0 0 -0 0</pose>
             <horizontal_fov>1.0469999999999999</horizontal_fov>
             <image>
