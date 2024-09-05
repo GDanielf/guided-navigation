@@ -9,7 +9,7 @@
     <plugin name='gz::sim::systems::UserCommands' filename='ignition-gazebo-user-commands-system'/>
     <plugin name='gz::sim::systems::SceneBroadcaster' filename='ignition-gazebo-scene-broadcaster-system'/>
     <plugin name='gz::sim::systems::Contact' filename='ignition-gazebo-contact-system'/>
-    <plugin name='gz::sim::systems::Sensors' filename='ignition-gazebo6-sensors-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='ignition-gazebo6-sensors-system'/>    
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
@@ -18,810 +18,18 @@
       <background>0.7 0.7 0.7 1</background>
       <shadows>true</shadows>
     </scene>
-    <model name='grey_wall'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>8.5189 10 0 0 -0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-6.30383 10 0 0 -0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_1'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>1.13935 10 0 0 -0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_2'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-10 6.13228 0 0 0 -1.57</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_2_1'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-10.0174 6.31748 0 0 0 -1.57</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_2_1_1'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-9.96712 -1.19536 0 0 0 -1.57</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_2_1_2'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-9.94606 -8.31786 0 0 0 -1.57</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_2_1_1_1'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>12.1347 6.30229 0 0 0 -1.57</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_2_1_1_1_1'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>12.0869 -0.497864 0 0 0 -1.57</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_2_1_1_1_2'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>12.1254 -7.47001 0 0 0 -1.57</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_3'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-5.56715 -11.9309 0 0 -0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_4'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>1.654 -11.9316 0 0 -0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_5'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>7.14165 -11.9235 0 0 -0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_2_1_1_1_2_1'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>12.0829 -8.40206 0 0 0 -1.57</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_5_1'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>8.73945 -11.9206 0 0 -0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='grey_wall_1_3_1'>
-      <static>true</static>
-      <link name='link'>
-        <pose>0 0 1.4 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>7.5 0.2 2.8</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/scripts</uri>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/grey wall/3/files/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
-        </visual>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>-6.28418 -11.957 0 0 -0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
     <model name='marble_husky_sensor_config_5'>
+      <plugin name='ignition::gazebo::systems::DiffDrive' filename='libignition-gazebo-diff-drive-system.so'>
+        <left_joint>front_left_wheel_joint</left_joint>
+        <right_joint>front_right_wheel_joint</right_joint>
+        <wheel_separation>0.5708</wheel_separation>
+        <wheel_radius>0.1651</wheel_radius>
+        <odom_publish_frequency>1</odom_publish_frequency>
+        <topic>cmd_vel</topic>
+        </plugin>
       <link name='base_link'>
         <inertial>
-          <pose>-0.000543 -0.084945 0.062329 0 -0 0</pose>
+          <pose>0 0 0.13228 0 -0 0</pose>
           <mass>46.064</mass>
           <inertia>
             <ixx>0.61539699999999997</ixx>
@@ -877,98 +85,6 @@
             <contact/>
           </surface>
         </collision>
-        <collision name='base_link_fixed_joint_lump__camera/camera_link_collision_2'>
-          <pose>0.478 0 0.285 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>0.0078 0.13 0.0192</size>
-            </box>
-          </geometry>
-          <surface>
-            <contact>
-              <ode>
-                <kp>10000000000000</kp>
-                <kd>1</kd>
-              </ode>
-            </contact>
-            <friction>
-              <ode>
-                <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-              </ode>
-            </friction>
-            <bounce/>
-          </surface>
-        </collision>
-        <collision name='base_link_fixed_joint_lump__camera/camera_link_collision_3'>
-          <pose>0.473 0 0.260 0 0.5236 0</pose>
-          <geometry>
-            <box>
-              <size>0.0078 0.13 0.0192</size>
-            </box>
-          </geometry>
-          <surface>
-            <contact>
-              <ode>
-                <kp>10000000000000</kp>
-                <kd>1</kd>
-              </ode>
-            </contact>
-            <friction>
-              <ode>
-                <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-              </ode>
-            </friction>
-            <bounce/>
-          </surface>
-        </collision>
-        <collision name='base_link_fixed_joint_lump__velodyne_base_link_collision_6'>
-          <pose>0.424 0 0.327 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.0717</length>
-              <radius>0.0516</radius>
-            </cylinder>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='base_link_fixed_joint_lump__sensor_tower_8'>
-          <pose>0.374 0 0.215 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>0.2 0.25 0.225</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='base_link_fixed_joint_lump__landing_pad_9'>
-          <pose>0.0 0 0.155 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>0.5 0.385 0.155</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
         <visual name='base_link_visual'>
           <geometry>
             <mesh>
@@ -1012,314 +128,8 @@
             </mesh>
           </geometry>
         </visual>
-        <visual name='base_link_fixed_joint_lump__planar_lidar_link_visual_14'>
-          <pose>0.474 0 0.127 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.044999999999999998</radius>
-              <length>0.050000000000000003</length>
-            </cylinder>
-          </geometry>
-        </visual>
-        <visual name='base_link_fixed_joint_lump__sensor_tower_16'>
-          <pose>0.374 0 0.215 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>0.2 0.25 0.225</size>
-            </box>
-          </geometry>
-        </visual>
-        <visual name='base_link_fixed_joint_lump__landing_pad_17'>
-          <pose>0.0 0 0.155 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>0.5 0.385 0.155</size>
-            </box>
-          </geometry>
-        </visual>
-        <sensor name='planar_laser' type='gpu_lidar'>
-          <pose>0.485 0 0.166 0 -0 0</pose>
-          <topic>__default__</topic>
-          <update_rate>20</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <lidar>
-            <scan>
-              <horizontal>
-                <samples>920</samples>
-                <resolution>1</resolution>
-                <min_angle>-3.1415899999999999</min_angle>
-                <max_angle>3.1415899999999999</max_angle>
-              </horizontal>
-              <vertical>
-                <samples>1</samples>
-                <min_angle>0</min_angle>
-                <max_angle>0</max_angle>
-                <resolution>1</resolution>
-              </vertical>
-            </scan>
-            <range>
-              <min>0.040000000000000001</min>
-              <max>25</max>
-              <resolution>0.029999999999999999</resolution>
-            </range>
-            <noise>
-              <type>gaussian</type>
-              <mean>0</mean>
-              <stddev>0.01</stddev>
-            </noise>
-            <visibility_mask>4294967295</visibility_mask>
-          </lidar>
-        </sensor>
         <gravity>true</gravity>
         <velocity_decay/>
-        <visual name='tof_left_camera_visual'>
-          <pose>0.527 0.015 0.429 -1.344521 0.4763404 0.4653087</pose>
-          <geometry>
-            <mesh>
-              <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/MARBLE_HUSKY_SENSOR_CONFIG_4/tip/files/meshes/realsense.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <visual name='tof_left_camera_mount_visual'>
-          <pose>0.5105 0.01 0.439 -1.344521 0.4763404 0.4653087</pose>
-          <geometry>
-            <box>
-              <size>0.04 0.135 0.0385</size>
-            </box>
-          </geometry>
-        </visual>
-        <collision name='tof_left_camera_mount_collision'>
-          <pose>0.5105 0.01 0.439 -1.344521 0.4763404 0.4653087</pose>
-          <geometry>
-            <box>
-              <size>0.04 0.135 0.0385</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <sensor name='tof_left' type='depth_camera'>
-          <pose>0.527 0.015 0.429 -1.34452 0.47634 0.465309</pose>
-          <topic>__default__</topic>
-          <update_rate>10</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <camera>
-            <pose>0 0 0 0 -0 0</pose>
-            <horizontal_fov>1.0821000000000001</horizontal_fov>
-            <image>
-              <width>224</width>
-              <height>171</height>
-              <format>RGB_INT8</format>
-              <anti_aliasing>4</anti_aliasing>
-            </image>
-            <camera_info_topic>__default__</camera_info_topic>
-            <trigger_topic></trigger_topic>
-            <triggered>false</triggered>
-            <clip>
-              <near>0.10000000000000001</near>
-              <far>4</far>
-            </clip>
-            <save enabled='false'>
-              <path>__default__</path>
-            </save>
-            <visibility_mask>4294967295</visibility_mask>
-            <noise>
-              <type>none</type>
-              <mean>0</mean>
-              <stddev>0</stddev>
-            </noise>
-            <distortion>
-              <k1>0</k1>
-              <k2>0</k2>
-              <k3>0</k3>
-              <p1>0</p1>
-              <p2>0</p2>
-              <center>0.5 0.5</center>
-            </distortion>
-            <lens>
-              <type>stereographic</type>
-              <scale_to_hfov>true</scale_to_hfov>
-              <cutoff_angle>1.5708</cutoff_angle>
-              <env_texture_size>256</env_texture_size>
-            </lens>
-            <optical_frame_id></optical_frame_id>
-          </camera>
-        </sensor>
-        <visual name='tof_right_camera_visual'>
-          <pose>0.527 -0.015 0.429 -1.7970717 0.4763404 -0.4653087</pose>
-          <geometry>
-            <mesh>
-              <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/MARBLE_HUSKY_SENSOR_CONFIG_4/tip/files/meshes/realsense.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <visual name='tof_right_camera_mount_visual'>
-          <pose>0.5105 -0.01 0.439 -1.7970717 0.4763404 -0.4653087</pose>
-          <geometry>
-            <box>
-              <size>0.04 0.135 0.0385</size>
-            </box>
-          </geometry>
-        </visual>
-        <collision name='tof_right_camera_mount_collision'>
-          <pose>0.5105 -0.01 0.439 -1.7970717 0.4763404 -0.4653087</pose>
-          <geometry>
-            <box>
-              <size>0.04 0.135 0.0385</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <sensor name='tof_right' type='depth_camera'>
-          <pose>0.527 -0.015 0.429 -1.79707 0.47634 -0.465309</pose>
-          <topic>__default__</topic>
-          <update_rate>10</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <camera>
-            <pose>0 0 0 0 -0 0</pose>
-            <horizontal_fov>1.0821000000000001</horizontal_fov>
-            <image>
-              <width>224</width>
-              <height>171</height>
-              <format>RGB_INT8</format>
-              <anti_aliasing>4</anti_aliasing>
-            </image>
-            <camera_info_topic>__default__</camera_info_topic>
-            <trigger_topic></trigger_topic>
-            <triggered>false</triggered>
-            <clip>
-              <near>0.10000000000000001</near>
-              <far>4</far>
-            </clip>
-            <save enabled='false'>
-              <path>__default__</path>
-            </save>
-            <visibility_mask>4294967295</visibility_mask>
-            <noise>
-              <type>none</type>
-              <mean>0</mean>
-              <stddev>0</stddev>
-            </noise>
-            <distortion>
-              <k1>0</k1>
-              <k2>0</k2>
-              <k3>0</k3>
-              <p1>0</p1>
-              <p2>0</p2>
-              <center>0.5 0.5</center>
-            </distortion>
-            <lens>
-              <type>stereographic</type>
-              <scale_to_hfov>true</scale_to_hfov>
-              <cutoff_angle>1.5708</cutoff_angle>
-              <env_texture_size>256</env_texture_size>
-            </lens>
-            <optical_frame_id></optical_frame_id>
-          </camera>
-        </sensor>
-        <visual name='sensor_head_visual'>
-          <pose>0.4379 0 .54818 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.1 0.1 0.125</size>
-            </box>
-          </geometry>
-        </visual>
-        <collision name='sensor_head_collision'>
-          <pose>0.4379 0 0.54818 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.1 0.1 0.125</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='sensor_tower_support_visual'>
-          <pose>0.4379 0 0.39918 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.04 0.04 0.25</size>
-            </box>
-          </geometry>
-        </visual>
-        <collision name='sensor_tower_support_collision'>
-          <pose>0.4379 0 0.39918 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.04 0.04 0.25</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='vertical_lidar_support_visual'>
-          <pose>0.4029 0 0.44418 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.2 0.04 0.04</size>
-            </box>
-          </geometry>
-        </visual>
-        <collision name='vertical_lidar_support_collision'>
-          <pose>0.4029 0 0.44418 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.2 0.04 0.04</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='diagonal_lidar_support_visual'>
-          <pose>0.3779 0 0.36418 0 0.8854 0</pose>
-          <geometry>
-            <box>
-              <size>0.18 0.04 0.04</size>
-            </box>
-          </geometry>
-        </visual>
-        <collision name='diagonal_lidar_support_collision'>
-          <pose>0.3779 0 0.36418 0 0.8854 0</pose>
-          <geometry>
-            <box>
-              <size>0.18 0.04 0.04</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
         <sensor name='imu_sensor' type='imu'>
           <pose>0 0 0 0 -0 0</pose>
           <topic>__default__</topic>
@@ -1404,414 +214,6 @@
             <enable_orientation>true</enable_orientation>
           </imu>
         </sensor>
-        <visual name='base_link_fixed_joint_lump__velodyne_base_link_visual_10'>
-          <pose>0.4379 0 0.61018 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/MARBLE_HUSKY_SENSOR_CONFIG_4/tip/files/meshes/VLP16_base_1.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <visual name='base_link_fixed_joint_lump__velodyne_base_link_visual_11'>
-          <pose>0.4379 0 0.61018 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/MARBLE_HUSKY_SENSOR_CONFIG_4/tip/files/meshes/VLP16_base_2.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <visual name='base_link_fixed_joint_lump__velodyne_visual_12'>
-          <pose>0.4379 0 0.61018 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/MARBLE_HUSKY_SENSOR_CONFIG_4/tip/files/meshes/VLP16_scan.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <visual name='base_link_fixed_joint_lump__velodyne_base_link_visual_13'>
-          <pose>0.31037 0 0.44818 0 -1.5708 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/MARBLE_HUSKY_SENSOR_CONFIG_4/tip/files/meshes/VLP16_base_1.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <visual name='base_link_fixed_joint_lump__velodyne_base_link_visual_14'>
-          <pose>0.31037 0 0.44818 0 -1.5708 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/MARBLE_HUSKY_SENSOR_CONFIG_4/tip/files/meshes/VLP16_base_2.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <visual name='base_link_fixed_joint_lump__velodyne_visual_15'>
-          <pose>0.31037 0 0.44818 0 -1.5708 0</pose>
-          <geometry>
-            <mesh>
-              <scale>1 1 1</scale>
-              <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/MARBLE_HUSKY_SENSOR_CONFIG_4/tip/files/meshes/VLP16_scan.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <sensor name='front_laser' type='gpu_lidar'>
-          <pose>0.4379 0 0.67018 0 -0 0</pose>
-          <topic>__default__</topic>
-          <update_rate>10</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <lidar>
-            <scan>
-              <horizontal>
-                <samples>1024</samples>
-                <resolution>1</resolution>
-                <min_angle>-3.1415899999999999</min_angle>
-                <max_angle>3.1415899999999999</max_angle>
-              </horizontal>
-              <vertical>
-                <samples>64</samples>
-                <min_angle>-0.28970000000000001</min_angle>
-                <max_angle>0.28970000000000001</max_angle>
-                <resolution>1</resolution>
-              </vertical>
-            </scan>
-            <range>
-              <min>0.80000000000000004</min>
-              <max>120</max>
-              <resolution>0.01</resolution>
-            </range>
-            <noise>
-              <type>gaussian</type>
-              <mean>0</mean>
-              <stddev>0.01</stddev>
-            </noise>
-            <visibility_mask>4294967295</visibility_mask>
-          </lidar>
-        </sensor>
-        <sensor name='vert_laser' type='gpu_lidar'>
-          <pose>0.31037 0 0.44818 3.14159 -1.57079 3.14159</pose>
-          <topic>__default__</topic>
-          <update_rate>10</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <lidar>
-            <scan>
-              <horizontal>
-                <samples>1024</samples>
-                <resolution>1</resolution>
-                <min_angle>-3.1415899999999999</min_angle>
-                <max_angle>3.1415899999999999</max_angle>
-              </horizontal>
-              <vertical>
-                <samples>64</samples>
-                <min_angle>-0.28970000000000001</min_angle>
-                <max_angle>0.28970000000000001</max_angle>
-                <resolution>1</resolution>
-              </vertical>
-            </scan>
-            <range>
-              <min>0.80000000000000004</min>
-              <max>120</max>
-              <resolution>0.01</resolution>
-            </range>
-            <noise>
-              <type>gaussian</type>
-              <mean>0</mean>
-              <stddev>0.01</stddev>
-            </noise>
-            <visibility_mask>4294967295</visibility_mask>
-          </lidar>
-        </sensor>
-        <visual name='camera_front_visual'>
-          <pose>0.5179 0 0.53718 0 1.5709 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.065000000000000002</length>
-              <radius>0.029999999999999999</radius>
-            </cylinder>
-          </geometry>
-        </visual>
-        <collision name='camera_front_collision'>
-          <pose>0.5179 0 0.53718 0 1.5709 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.065000000000000002</length>
-              <radius>0.029999999999999999</radius>
-            </cylinder>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <sensor name='camera_front' type='camera'>
-          <pose>0.5579 0 0.53718 0 -0 0</pose>
-          <topic>__default__</topic>
-          <update_rate>10</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <camera>
-            <pose>0 0 0 0 -0 0</pose>
-            <horizontal_fov>1.3962600000000001</horizontal_fov>
-            <image>
-              <width>808</width>
-              <height>608</height>
-              <format>RGB_INT8</format>
-              <anti_aliasing>4</anti_aliasing>
-            </image>
-            <camera_info_topic>__default__</camera_info_topic>
-            <trigger_topic></trigger_topic>
-            <triggered>false</triggered>
-            <clip>
-              <near>0.01</near>
-              <far>300</far>
-            </clip>
-            <save enabled='false'>
-              <path>__default__</path>
-            </save>
-            <visibility_mask>4294967295</visibility_mask>
-            <noise>
-              <type>none</type>
-              <mean>0</mean>
-              <stddev>0</stddev>
-            </noise>
-            <distortion>
-              <k1>0</k1>
-              <k2>0</k2>
-              <k3>0</k3>
-              <p1>0</p1>
-              <p2>0</p2>
-              <center>0.5 0.5</center>
-            </distortion>
-            <lens>
-              <type>stereographic</type>
-              <scale_to_hfov>true</scale_to_hfov>
-              <cutoff_angle>1.5708</cutoff_angle>
-              <env_texture_size>256</env_texture_size>
-            </lens>
-            <optical_frame_id></optical_frame_id>
-          </camera>
-        </sensor>
-        <visual name='camera_back_visual'>
-          <pose>0.3579 0 0.53718 0 1.5709 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.065000000000000002</length>
-              <radius>0.029999999999999999</radius>
-            </cylinder>
-          </geometry>
-        </visual>
-        <collision name='camera_back_collision'>
-          <pose>0.3579 0 0.53718 0 1.5709 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.065000000000000002</length>
-              <radius>0.029999999999999999</radius>
-            </cylinder>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <sensor name='camera_back' type='camera'>
-          <pose>0.3179 0 0.53718 0 -0 3.14159</pose>
-          <topic>__default__</topic>
-          <update_rate>10</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <camera>
-            <pose>0 0 0 0 -0 0</pose>
-            <horizontal_fov>1.3962600000000001</horizontal_fov>
-            <image>
-              <width>808</width>
-              <height>608</height>
-              <format>RGB_INT8</format>
-              <anti_aliasing>4</anti_aliasing>
-            </image>
-            <camera_info_topic>__default__</camera_info_topic>
-            <trigger_topic></trigger_topic>
-            <triggered>false</triggered>
-            <clip>
-              <near>0.01</near>
-              <far>300</far>
-            </clip>
-            <save enabled='false'>
-              <path>__default__</path>
-            </save>
-            <visibility_mask>4294967295</visibility_mask>
-            <noise>
-              <type>none</type>
-              <mean>0</mean>
-              <stddev>0</stddev>
-            </noise>
-            <distortion>
-              <k1>0</k1>
-              <k2>0</k2>
-              <k3>0</k3>
-              <p1>0</p1>
-              <p2>0</p2>
-              <center>0.5 0.5</center>
-            </distortion>
-            <lens>
-              <type>stereographic</type>
-              <scale_to_hfov>true</scale_to_hfov>
-              <cutoff_angle>1.5708</cutoff_angle>
-              <env_texture_size>256</env_texture_size>
-            </lens>
-            <optical_frame_id></optical_frame_id>
-          </camera>
-        </sensor>
-        <visual name='camera_left_visual'>
-          <pose>0.4379 0.08 0.53718 1.5709 0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.065000000000000002</length>
-              <radius>0.029999999999999999</radius>
-            </cylinder>
-          </geometry>
-        </visual>
-        <collision name='camera_left_collision'>
-          <pose>0.4379 0.08 0.53718 1.5709 0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.065000000000000002</length>
-              <radius>0.029999999999999999</radius>
-            </cylinder>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <sensor name='camera_left' type='camera'>
-          <pose>0.4379 0.12 0.53718 0 -0 1.5708</pose>
-          <topic>__default__</topic>
-          <update_rate>10</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <camera>
-            <pose>0 0 0 0 -0 0</pose>
-            <horizontal_fov>1.3962600000000001</horizontal_fov>
-            <image>
-              <width>808</width>
-              <height>608</height>
-              <format>RGB_INT8</format>
-              <anti_aliasing>4</anti_aliasing>
-            </image>
-            <camera_info_topic>__default__</camera_info_topic>
-            <trigger_topic></trigger_topic>
-            <triggered>false</triggered>
-            <clip>
-              <near>0.01</near>
-              <far>300</far>
-            </clip>
-            <save enabled='false'>
-              <path>__default__</path>
-            </save>
-            <visibility_mask>4294967295</visibility_mask>
-            <noise>
-              <type>none</type>
-              <mean>0</mean>
-              <stddev>0</stddev>
-            </noise>
-            <distortion>
-              <k1>0</k1>
-              <k2>0</k2>
-              <k3>0</k3>
-              <p1>0</p1>
-              <p2>0</p2>
-              <center>0.5 0.5</center>
-            </distortion>
-            <lens>
-              <type>stereographic</type>
-              <scale_to_hfov>true</scale_to_hfov>
-              <cutoff_angle>1.5708</cutoff_angle>
-              <env_texture_size>256</env_texture_size>
-            </lens>
-            <optical_frame_id></optical_frame_id>
-          </camera>
-        </sensor>
-        <visual name='camera_right_visual'>
-          <pose>0.4379 -0.08 0.53718 1.5709 0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.065000000000000002</length>
-              <radius>0.029999999999999999</radius>
-            </cylinder>
-          </geometry>
-        </visual>
-        <collision name='camera_right_collision'>
-          <pose>0.4379 -0.08 0.53718 1.5709 0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.065000000000000002</length>
-              <radius>0.029999999999999999</radius>
-            </cylinder>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <sensor name='camera_right' type='camera'>
-          <pose>0.4379 -0.12 0.53718 0 0 -1.5708</pose>
-          <topic>__default__</topic>
-          <update_rate>10</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <camera>
-            <pose>0 0 0 0 -0 0</pose>
-            <horizontal_fov>1.3962600000000001</horizontal_fov>
-            <image>
-              <width>808</width>
-              <height>608</height>
-              <format>RGB_INT8</format>
-              <anti_aliasing>4</anti_aliasing>
-            </image>
-            <camera_info_topic>__default__</camera_info_topic>
-            <trigger_topic></trigger_topic>
-            <triggered>false</triggered>
-            <clip>
-              <near>0.01</near>
-              <far>300</far>
-            </clip>
-            <save enabled='false'>
-              <path>__default__</path>
-            </save>
-            <visibility_mask>4294967295</visibility_mask>
-            <noise>
-              <type>none</type>
-              <mean>0</mean>
-              <stddev>0</stddev>
-            </noise>
-            <distortion>
-              <k1>0</k1>
-              <k2>0</k2>
-              <k3>0</k3>
-              <p1>0</p1>
-              <p2>0</p2>
-              <center>0.5 0.5</center>
-            </distortion>
-            <lens>
-              <type>stereographic</type>
-              <scale_to_hfov>true</scale_to_hfov>
-              <cutoff_angle>1.5708</cutoff_angle>
-              <env_texture_size>256</env_texture_size>
-            </lens>
-            <optical_frame_id></optical_frame_id>
-          </camera>
-        </sensor>
         <light name='flashlight_flashlight_light_source_lamp_light_front' type='spot'>
           <pose>0.5179 0 0.53718 -3e-06 1.57069 -3.14159</pose>
           <cast_shadows>false</cast_shadows>
@@ -1892,7 +294,7 @@
         <enable_wind>false</enable_wind>
       </link>
       <link name='front_left_wheel_link'>
-        <pose>0.256 0.2854 0.03282 -0 -0 -0</pose>
+        <pose>0.256 0.2854 0.03282 0 -0 0</pose>
         <inertial>
           <mass>2.637</mass>
           <inertia>
@@ -1967,7 +369,7 @@
         <pose>0 0 0 0 -0 0</pose>
       </joint>
       <link name='front_right_wheel_link'>
-        <pose>0.256 -0.2854 0.03282 -0 -0 -0</pose>
+        <pose>0.256 -0.2854 0.03282 0 -0 0</pose>
         <inertial>
           <mass>2.637</mass>
           <inertia>
@@ -2042,7 +444,7 @@
         <pose>0 0 0 0 -0 0</pose>
       </joint>
       <link name='rear_left_wheel_link'>
-        <pose>-0.256 0.2854 0.03282 -0 -0 -0</pose>
+        <pose>-0.256 0.2854 0.03282 0 -0 0</pose>
         <inertial>
           <mass>2.637</mass>
           <inertia>
@@ -2117,7 +519,7 @@
         <pose>0 0 0 0 -0 0</pose>
       </joint>
       <link name='rear_right_wheel_link'>
-        <pose>-0.256 -0.2854 0.03282 -0 -0 -0</pose>
+        <pose>-0.256 -0.2854 0.03282 0 -0 0</pose>
         <inertial>
           <mass>2.637</mass>
           <inertia>
@@ -2191,7 +593,7 @@
         </axis>
         <pose>0 0 0 0 -0 0</pose>
       </joint>
-      <pose>-0 -0 0.110081 0 0 0</pose>
+      <pose>8.81827 0 0.132279 0 -0 0</pose>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
@@ -2297,8 +699,8 @@
             <pose>0 0 0 0 -0 0</pose>
             <horizontal_fov>1.0469999999999999</horizontal_fov>
             <image>
-              <width>640</width>
-              <height>480</height>
+              <width>1280</width>
+              <height>960</height>
               <format>RGB_INT8</format>
               <anti_aliasing>4</anti_aliasing>
             </image>
@@ -2307,7 +709,7 @@
             <triggered>false</triggered>
             <clip>
               <near>0.10000000000000001</near>
-              <far>100</far>
+              <far>10</far>
             </clip>
             <save enabled='false'>
               <path>__default__</path>
@@ -2349,7 +751,7 @@
           </inertia>
         </inertial>
       </link>
-      <pose>-8.95 0 3 0.272541 -0 1.57182</pose>
+      <pose>-4.3722 0.8202 2.8947 0.2725 -0 0</pose>
       <static>true</static>
       <self_collide>false</self_collide>
     </model>
@@ -2402,8 +804,8 @@
             <pose>0 0 0 0 -0 0</pose>
             <horizontal_fov>1.0469999999999999</horizontal_fov>
             <image>
-              <width>640</width>
-              <height>480</height>
+              <width>1280</width>
+              <height>960</height>
               <format>RGB_INT8</format>
               <anti_aliasing>4</anti_aliasing>
             </image>
@@ -2412,7 +814,7 @@
             <triggered>false</triggered>
             <clip>
               <near>0.10000000000000001</near>
-              <far>100</far>
+              <far>10</far>
             </clip>
             <save enabled='false'>
               <path>__default__</path>
@@ -2454,7 +856,7 @@
           </inertia>
         </inertial>
       </link>
-      <pose>0 8.95 3 0.45 -0 0</pose>
+      <pose>0 4.04054 2.77933 0.27273 -0 0</pose>
       <static>true</static>
       <self_collide>false</self_collide>
     </model>
@@ -2507,8 +909,8 @@
             <pose>0 0 0 0 -0 0</pose>
             <horizontal_fov>1.0469999999999999</horizontal_fov>
             <image>
-              <width>640</width>
-              <height>480</height>
+              <width>1280</width>
+              <height>960</height>
               <format>RGB_INT8</format>
               <anti_aliasing>4</anti_aliasing>
             </image>
@@ -2517,7 +919,7 @@
             <triggered>false</triggered>
             <clip>
               <near>0.10000000000000001</near>
-              <far>100</far>
+              <far>1000</far>
             </clip>
             <save enabled='false'>
               <path>__default__</path>
@@ -2559,7 +961,7 @@
           </inertia>
         </inertial>
       </link>
-      <pose>-0 -8.95 3 0.45 -0 3.14</pose>
+      <pose>9.09416 -5.68597 2.03278 0.3275 0.006 -2.84</pose>
       <static>true</static>
       <self_collide>false</self_collide>
     </model>
@@ -2597,6 +999,42 @@
             <diffuse>0.7 0.7 0.7 1</diffuse>
             <specular>0.01 0.01 0.01 1</specular>
           </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 -0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='urban_room_2way'>
+      <static>true</static>
+      <link name='base'>
+        <collision name='collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/urban room 2 way/3/files/meshes/room_2way.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/urban room 2 way/3/files/meshes/room_2way.dae</uri>
+            </mesh>
+          </geometry>
         </visual>
         <pose>0 0 0 0 -0 0</pose>
         <inertial>
