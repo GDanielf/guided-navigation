@@ -40,5 +40,10 @@ Em outro terminal:
 Fazer a bridge entre o topico da camera 3 do gazebo com ROS2:
 > ros2 run ros_gz_bridge parameter_bridge /world/empty/model/rgbd_camera_2/link/link_2/sensor/camera_sensor_2/image@sensor_msgs/msg/Image@gz.msgs.Image --ros-args --remap __node:=camera_3_bridge
 
+### 4a camera:
+Em outro terminal:
+Fazer a bridge entre o topico da camera 4 do gazebo com ROS2:
+> ros2 run ros_gz_bridge parameter_bridge /world/empty/model/rgbd_camera_3/link/link_3/sensor/camera_sensor_3/image@sensor_msgs/msg/Image@gz.msgs.Image --ros-args --remap __node:=camera_4_bridge
+
 ### Visualizar no rviz:
 > ros2 run rqt_image_view rqt_image_view /world/empty/model/rgbd_camera_1/link/link_1/sensor/camera_sensor_1/image
