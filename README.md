@@ -14,7 +14,10 @@ sudo apt-get install ros-humble-ros-ign-bridge
 
 https://github.com/gazebosim/ros_gz/tree/ros2/ros_gz_bridge
 
-### Comandos para teste:
+### Colocar isso no bashrc:
+export GZ_SIM_RESOURCE_PATH=/home/gdaniel/mestrado_ws/models
+
+### Iniciar o mundo no gazebo:
 > ign gazebo ~/mestrado_ws/world/camera_world.sdf
 
 ## Como conectar cada camera com o ROS2:
