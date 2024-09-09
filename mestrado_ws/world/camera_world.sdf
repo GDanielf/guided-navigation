@@ -295,7 +295,7 @@
         <enable_wind>false</enable_wind>
       </link>
       <link name='front_left_wheel_link'>
-        <pose>0.256 0.2854 0.03282 0 -0 0</pose>
+        <pose>0.256 0.2854 0.03282 3.14159 1.56065 3.14159</pose>
         <inertial>
           <mass>2.637</mass>
           <inertia>
@@ -367,10 +367,10 @@
             <friction>0</friction>
           </dynamics>
         </axis>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>-0 0 0 0 -0 0</pose>
       </joint>
       <link name='front_right_wheel_link'>
-        <pose>0.256 -0.2854 0.03282 0 -0 0</pose>
+        <pose>0.256 -0.2854 0.03282 -3.14159 -1.12567 3.14159</pose>
         <inertial>
           <mass>2.637</mass>
           <inertia>
@@ -442,10 +442,10 @@
             <friction>0</friction>
           </dynamics>
         </axis>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>-0 -0 -0 0 -0 0</pose>
       </joint>
       <link name='rear_left_wheel_link'>
-        <pose>-0.256 0.2854 0.03282 0 -0 0</pose>
+        <pose>-0.256 0.2854 0.03282 -3.14159 -1.24457 3.14159</pose>
         <inertial>
           <mass>2.637</mass>
           <inertia>
@@ -520,7 +520,7 @@
         <pose>0 0 0 0 -0 0</pose>
       </joint>
       <link name='rear_right_wheel_link'>
-        <pose>-0.256 -0.2854 0.03282 0 -0 0</pose>
+        <pose>-0.256 -0.2854 0.03282 3.14159 -1.37211 -3.14159</pose>
         <inertial>
           <mass>2.637</mass>
           <inertia>
@@ -594,7 +594,7 @@
         </axis>
         <pose>0 0 0 0 -0 0</pose>
       </joint>
-      <pose>8.81827 0 0.132279 0 -0 0</pose>
+      <pose>4.3707 -0.290931 0.13228 0 -0 0.044915</pose>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
@@ -653,55 +653,28 @@
     </model>
     <model name='rgbd_camera'>
       <link name='link'>
-        <pose>0 0 0 0 -0 0</pose>
-        <collision name='collision_top'>
-          <pose>0 -0.02 0.034 0 0 0</pose>
+        <visual name='camera_visual_0'>
           <geometry>
             <box>
-              <size>0.165 0.04 0.03</size>
+              <size>0.1 0.1 0.1</size>
             </box>
           </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='collision_base'>
-          <pose>0 -0.010 0.00725 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.06 0.06 0.015</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/rgbd camera/3/files/meshes/3dCamera.DAE</uri>
-            </mesh>
-          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
         </visual>
         <sensor name='camera_sensor' type='camera'>
-          <pose>0 0 0 0 0 -1.57</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <topic>__default__</topic>
           <update_rate>30</update_rate>
           <enable_metrics>false</enable_metrics>
-          <camera name='__default__'>
+          <camera>
             <pose>0 0 0 0 -0 0</pose>
             <horizontal_fov>1.0469999999999999</horizontal_fov>
             <image>
-              <width>1280</width>
-              <height>960</height>
+              <width>1920</width>
+              <height>1080</height>
               <format>RGB_INT8</format>
               <anti_aliasing>4</anti_aliasing>
             </image>
@@ -710,7 +683,7 @@
             <triggered>false</triggered>
             <clip>
               <near>0.10000000000000001</near>
-              <far>10</far>
+              <far>100</far>
             </clip>
             <save enabled='false'>
               <path>__default__</path>
@@ -738,112 +711,7 @@
             <optical_frame_id></optical_frame_id>
           </camera>
         </sensor>
-        <enable_wind>false</enable_wind>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-      </link>
-      <pose>-4.3722 0.8202 2.8947 0.2725 -0 0</pose>
-      <static>true</static>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='rgbd_camera_1'>
-      <link name='link_1'>
         <pose>0 0 0 0 -0 0</pose>
-        <collision name='collision_top'>
-          <pose>0 -0.02 0.034 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.165 0.04 0.03</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='collision_base'>
-          <pose>0 -0.010 0.00725 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.06 0.06 0.015</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/rgbd camera/3/files/meshes/3dCamera.DAE</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <sensor name='camera_sensor_1' type='camera'>
-          <pose>0 0 0 0 0 -1.57</pose>
-          <topic>__default__</topic>
-          <update_rate>30</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <camera name='__default__'>
-            <pose>0 0 0 0 -0 0</pose>
-            <horizontal_fov>1.0469999999999999</horizontal_fov>
-            <image>
-              <width>1280</width>
-              <height>960</height>
-              <format>RGB_INT8</format>
-              <anti_aliasing>4</anti_aliasing>
-            </image>
-            <camera_info_topic>__default__</camera_info_topic>
-            <trigger_topic></trigger_topic>
-            <triggered>false</triggered>
-            <clip>
-              <near>0.10000000000000001</near>
-              <far>10</far>
-            </clip>
-            <save enabled='false'>
-              <path>__default__</path>
-            </save>
-            <visibility_mask>4294967295</visibility_mask>
-            <noise>
-              <type>none</type>
-              <mean>0</mean>
-              <stddev>0</stddev>
-            </noise>
-            <distortion>
-              <k1>0</k1>
-              <k2>0</k2>
-              <k3>0</k3>
-              <p1>0</p1>
-              <p2>0</p2>
-              <center>0.5 0.5</center>
-            </distortion>
-            <lens>
-              <type>stereographic</type>
-              <scale_to_hfov>true</scale_to_hfov>
-              <cutoff_angle>1.5708</cutoff_angle>
-              <env_texture_size>256</env_texture_size>
-            </lens>
-            <optical_frame_id></optical_frame_id>
-          </camera>
-        </sensor>
-        <enable_wind>false</enable_wind>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
           <mass>1</mass>
@@ -856,113 +724,9 @@
             <izz>1</izz>
           </inertia>
         </inertial>
-      </link>
-      <pose>0 4.04054 2.77933 0.27273 -0 0</pose>
-      <static>true</static>
-      <self_collide>false</self_collide>
-    </model>
-    <model name='rgbd_camera_2'>
-      <link name='link_2'>
-        <pose>0 0 0 0 -0 0</pose>
-        <collision name='collision_top'>
-          <pose>0 -0.02 0.034 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.165 0.04 0.03</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <collision name='collision_base'>
-          <pose>0 -0.010 0.00725 0 0 0</pose>
-          <geometry>
-            <box>
-              <size>0.06 0.06 0.015</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/rgbd camera/3/files/meshes/3dCamera.DAE</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <sensor name='camera_sensor_2' type='camera'>
-          <pose>0 0 0 0 0 -1.57</pose>
-          <topic>__default__</topic>
-          <update_rate>30</update_rate>
-          <enable_metrics>false</enable_metrics>
-          <camera name='__default__'>
-            <pose>0 0 0 0 -0 0</pose>
-            <horizontal_fov>1.0469999999999999</horizontal_fov>
-            <image>
-              <width>1280</width>
-              <height>960</height>
-              <format>RGB_INT8</format>
-              <anti_aliasing>4</anti_aliasing>
-            </image>
-            <camera_info_topic>__default__</camera_info_topic>
-            <trigger_topic></trigger_topic>
-            <triggered>false</triggered>
-            <clip>
-              <near>0.10000000000000001</near>
-              <far>1000</far>
-            </clip>
-            <save enabled='false'>
-              <path>__default__</path>
-            </save>
-            <visibility_mask>4294967295</visibility_mask>
-            <noise>
-              <type>none</type>
-              <mean>0</mean>
-              <stddev>0</stddev>
-            </noise>
-            <distortion>
-              <k1>0</k1>
-              <k2>0</k2>
-              <k3>0</k3>
-              <p1>0</p1>
-              <p2>0</p2>
-              <center>0.5 0.5</center>
-            </distortion>
-            <lens>
-              <type>stereographic</type>
-              <scale_to_hfov>true</scale_to_hfov>
-              <cutoff_angle>1.5708</cutoff_angle>
-              <env_texture_size>256</env_texture_size>
-            </lens>
-            <optical_frame_id></optical_frame_id>
-          </camera>
-        </sensor>
         <enable_wind>false</enable_wind>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
       </link>
-      <pose>9.09416 -5.68597 2.03278 0.3275 0.006 -2.84</pose>
+      <pose>9.91063 -7.41406 4.90664 0 0.3745 2.3213</pose>
       <static>true</static>
       <self_collide>false</self_collide>
     </model>
@@ -1019,24 +783,71 @@
       <pose>0 0 0 0 -0 0</pose>
       <self_collide>false</self_collide>
     </model>
-    <model name='urban_room_2way'>
-      <static>true</static>
-      <link name='base'>
-        <collision name='collision'>
-          <pose>0 0 0 0 0 0</pose>
+    <include>
+      <uri>file:///home/gdaniel/mestrado_ws/models/room</uri>
+      <name>urban_room_2way</name>
+      <pose>0 0 0 0 -0 0</pose>
+    </include>
+    <model name='rgbd_camera_1'>
+      <link name='link_1'>
+        <visual name='camera_visual_1'>
           <geometry>
-            <mesh>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/urban room 2 way/3/files/meshes/room_2way.dae</uri>
-            </mesh>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
           </geometry>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/urban room 2 way/3/files/meshes/room_2way.dae</uri>
-            </mesh>
-          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
         </visual>
+        <sensor name='camera_sensor_1' type='camera'>
+          <pose>0 0 0 0 -0 0</pose>
+          <topic>__default__</topic>
+          <update_rate>30</update_rate>
+          <enable_metrics>false</enable_metrics>
+          <camera>
+            <pose>0 0 0 0 -0 0</pose>
+            <horizontal_fov>1.0469999999999999</horizontal_fov>
+            <image>
+              <width>1920</width>
+              <height>1080</height>
+              <format>RGB_INT8</format>
+              <anti_aliasing>4</anti_aliasing>
+            </image>
+            <camera_info_topic>__default__</camera_info_topic>
+            <trigger_topic></trigger_topic>
+            <triggered>false</triggered>
+            <clip>
+              <near>0.10000000000000001</near>
+              <far>100</far>
+            </clip>
+            <save enabled='false'>
+              <path>__default__</path>
+            </save>
+            <visibility_mask>4294967295</visibility_mask>
+            <noise>
+              <type>none</type>
+              <mean>0</mean>
+              <stddev>0</stddev>
+            </noise>
+            <distortion>
+              <k1>0</k1>
+              <k2>0</k2>
+              <k3>0</k3>
+              <p1>0</p1>
+              <p2>0</p2>
+              <center>0.5 0.5</center>
+            </distortion>
+            <lens>
+              <type>stereographic</type>
+              <scale_to_hfov>true</scale_to_hfov>
+              <cutoff_angle>1.5708</cutoff_angle>
+              <env_texture_size>256</env_texture_size>
+            </lens>
+            <optical_frame_id></optical_frame_id>
+          </camera>
+        </sensor>
         <pose>0 0 0 0 -0 0</pose>
         <inertial>
           <pose>0 0 0 0 -0 0</pose>
@@ -1052,7 +863,8 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>0 0 0 0 -0 0</pose>
+      <pose>9.9422 7.3728 4.907 0 0.328 -2.5103</pose>
+      <static>true</static>
       <self_collide>false</self_collide>
     </model>
     <light name='sun' type='directional'>
