@@ -20,6 +20,12 @@ export GZ_SIM_RESOURCE_PATH=/home/gdaniel/mestrado_ws/models
 ### Iniciar o mundo no gazebo:
 > ign gazebo ~/mestrado_ws/world/camera_world.sdf
 
+## Configuracao para deteccao com o modelo de treinamento da yolo:
+> export ROBOFLOW_API_KEY="aFkoLbgUAThELZEBkgQ5"
+
+## Colocar isso na pasta ros2_ws
+> source install/local_setup.bash
+
 ## Como conectar cada camera com o ROS2:
 
 ### Checar os topicos do gazebo:
