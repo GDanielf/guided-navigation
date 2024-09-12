@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+
 <sdf version='1.9'>
   <world name='empty'>
     <physics name='1ms' type='ignored'>
@@ -24,8 +25,8 @@
       <plugin name='ignition::gazebo::systems::DiffDrive' filename='libignition-gazebo-diff-drive-system.so'>
         <left_joint>front_left_wheel_joint</left_joint>
         <left_joint>rear_left_wheel_joint</left_joint>
-        <right_joint>front_right_wheel_joint</right_joint>    
-        <right_joint>rear_right_wheel_joint</right_joint>   
+        <right_joint>front_right_wheel_joint</right_joint>
+        <right_joint>rear_right_wheel_joint</right_joint>
         <wheel_separation>0.535</wheel_separation>
         <wheel_radius>0.165</wheel_radius>
         <odom_publish_frequency>1</odom_publish_frequency>
@@ -34,7 +35,7 @@
       <link name='base_link'>
         <inertial>
           <pose>0 0 0.13228 0 -0 0</pose>
-          <mass>50aaaaaaaaaa</mass>
+          <mass>50</mass>
           <inertia>
             <ixx>0.61539699999999997</ixx>
             <ixy>-0.0240585</ixy>
@@ -298,7 +299,7 @@
         <enable_wind>false</enable_wind>
       </link>
       <link name='front_left_wheel_link'>
-        <pose>0.256 0.2854 0.03282 3.14159 1.56065 3.14159</pose>
+        <pose>0.256 0.2854 0.03282 0 -1.07543 -0</pose>
         <inertial>
           <mass>2.637</mass>
           <inertia>
@@ -373,7 +374,7 @@
         <pose>-0 0 0 0 -0 0</pose>
       </joint>
       <link name='front_right_wheel_link'>
-        <pose>0.256 -0.2854 0.03282 -3.14159 -1.12567 3.14159</pose>
+        <pose>0.256 -0.2854 0.03282 -3.14159 0.919859 -3.14159</pose>
         <inertial>
           <mass>2.637</mass>
           <inertia>
@@ -448,7 +449,7 @@
         <pose>-0 -0 -0 0 -0 0</pose>
       </joint>
       <link name='rear_left_wheel_link'>
-        <pose>-0.256 0.2854 0.03282 -3.14159 -1.24457 3.14159</pose>
+        <pose>-0.256 0.2854 0.03282 -3.14159 1.4118 -3.14159</pose>
         <inertial>
           <mass>2.637</mass>
           <inertia>
@@ -523,7 +524,7 @@
         <pose>0 0 0 0 -0 0</pose>
       </joint>
       <link name='rear_right_wheel_link'>
-        <pose>-0.256 -0.2854 0.03282 3.14159 -1.37211 -3.14159</pose>
+        <pose>-0.256 -0.2854 0.03282 3.14159 0.673419 3.14159</pose>
         <inertial>
           <mass>2.637</mass>
           <inertia>
@@ -597,7 +598,7 @@
         </axis>
         <pose>0 0 0 0 -0 0</pose>
       </joint>
-      <pose>4.3707 -0.290931 0.13228 0 -0 0.044915</pose>
+      <pose>1.54075 0.86249 0.13228 0 -0 -2.39705</pose>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
@@ -734,7 +735,7 @@
       <self_collide>false</self_collide>
     </model>
     <include>
-      <uri>/home/gdaniel/ros2_ws/src/guided_navigation/models/room</uri>
+      <uri>file:///home/gdaniel/ros2_ws/src/guided_navigation/models/room</uri>
       <name>urban_room_2way</name>
       <pose>0 0 0 0 -0 0</pose>
     </include>
@@ -813,7 +814,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>-9.80918 -7.36591 4.907 -0 0.366 0.5975</pose>
+      <pose>-9.80918 -7.36591 4.907 0 0.366 0.5975</pose>
       <static>true</static>
       <self_collide>false</self_collide>
     </model>
@@ -892,7 +893,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>9.9253 7.43722 4.907 -0 0.328 -2.5103</pose>
+      <pose>9.9253 7.43722 4.907 0 0.328 -2.5103</pose>
       <static>true</static>
       <self_collide>false</self_collide>
     </model>

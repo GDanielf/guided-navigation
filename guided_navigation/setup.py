@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'multi_camera = guided_navigation.multi_camera_subscriber:main'
+            'multi_camera = scripts.multi_camera_subscriber:main'
         ],
     },
 )

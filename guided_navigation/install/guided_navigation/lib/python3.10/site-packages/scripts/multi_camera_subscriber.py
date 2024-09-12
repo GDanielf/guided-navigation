@@ -4,26 +4,21 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
 import inference
-import numpy as np
-import math
 
-#from guided_navigation.msg import Rectangle
 class MultiCameraSubscriber(Node):
     def __init__(self):
         super().__init__('multi_camera_subscriber')
 
         self.image = None
         self.bridge = CvBridge()
-        # angulos de cada camera para enviar (float)
-        self.angle1 = 0
-        self.angle2 = 0
-        self.angle3 = 0
-        self.angle4 = 0
-
-        #configuracao da caixa delimitador de deteccao
-        self.font_size = 1.5
-        self.font_color = (0, 0, 255)
-        self.font_thickness = 2
+        self.x1 = 0
+        self.y1 = 0
+        self.x2 = 0
+        self.y2 = 0
+        self.x3 = 0
+        self.y3 = 0
+        self.x4 = 0
+        self.y4 = 0
 
         # Configuração do Modelo
         self.model = inference.get_model("husky_test/3")
@@ -60,18 +55,6 @@ class MultiCameraSubscriber(Node):
         self.subscription3
         self.subscription4
 
-    #funcao que recebe o ponto do centro do retangulo e retorna o angulo entre a reta que divide metade da imagem o ponto 
-
-    def angulo_centro(self,x,y):
-        angle = 0
-        tang = (x - 959)/y
-        angle = math.atan(tang)
-
-        # Converter o ângulo para graus
-        angle_degrees = math.degrees(angle)
-
-        return angle_degrees
-
 
     def camera1_callback(self, msg):
         #self.get_logger().info('Recebida imagem da câmera 1')
@@ -81,16 +64,14 @@ class MultiCameraSubscriber(Node):
         #print(predict)
         for prediction in predict[0].predictions:
             # Extrai as coordenadas e dimensões da caixa delimitadora
-            x = int(prediction.x)
-            y = int(prediction.y)
+            self.x1 = int(prediction.x)
+            self.y1 = int(prediction.y)
             width = int(prediction.width)
             height = int(prediction.height)
-            self.angle1 = self.angulo_centro(x,y)
-            print('Camera 1 - x: ', x, 'y: ', y, 'angle: ', self.angle1)
-
+            
             # Calcula as coordenadas dos cantos da caixa
-            top_left = (abs(int(width/2) - x), abs(int(height/2) - y))
-            bottom_right = (int(width/2) + x, int(height/2) + y)
+            top_left = (abs(int(width/2) - self.x1), abs(int(height/2) - self.y1))
+            bottom_right = (int(width/2) + self.x1, int(height/2) + self.y1)
             
             # Desenha a caixa delimitadora na imagem
             cv2.rectangle(cv_image, top_left, bottom_right, (0, 255, 0), 2)  # Verde, espessura 2
@@ -100,7 +81,7 @@ class MultiCameraSubscriber(Node):
                         
             # Desenha o texto na imagem
             cv2.putText(cv_image, label, top_left, 
-                        cv2.FONT_HERSHEY_SIMPLEX, self.font_size, self.font_color, self.font_thickness, cv2.LINE_AA)
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1, cv2.LINE_AA)
         
         resized_image = cv2.resize(cv_image, (640, 480))
         cv2.imshow('Camera 1', resized_image)
@@ -118,9 +99,7 @@ class MultiCameraSubscriber(Node):
             y = int(prediction.y)
             width = int(prediction.width)
             height = int(prediction.height)
-            self.angle2 = self.angulo_centro(x,y)
-            print('Camera 2 - x: ', x, 'y: ', y, 'angle: ', self.angle2)
-
+            
             # Calcula as coordenadas dos cantos da caixa
             top_left = (abs(int(width/2) - x), abs(int(height/2) - y))
             bottom_right = (int(width/2) + x, int(height/2) + y)
@@ -133,7 +112,7 @@ class MultiCameraSubscriber(Node):
                         
             # Desenha o texto na imagem
             cv2.putText(cv_image, label, top_left, 
-                        cv2.FONT_HERSHEY_SIMPLEX, self.font_size, self.font_color, self.font_thickness, cv2.LINE_AA)
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1, cv2.LINE_AA)
         
         resized_image = cv2.resize(cv_image, (640, 480))
         cv2.imshow('Camera 2', resized_image)
@@ -151,9 +130,7 @@ class MultiCameraSubscriber(Node):
             y = int(prediction.y)
             width = int(prediction.width)
             height = int(prediction.height)
-            self.angle3 = self.angulo_centro(x,y)
-            print('Camera 3 - x: ', x, 'y: ', y, 'angle: ', self.angle3)
-
+            
             # Calcula as coordenadas dos cantos da caixa
             top_left = (abs(int(width/2) - x), abs(int(height/2) - y))
             bottom_right = (int(width/2) + x, int(height/2) + y)
@@ -166,7 +143,7 @@ class MultiCameraSubscriber(Node):
                         
             # Desenha o texto na imagem
             cv2.putText(cv_image, label, top_left, 
-                        cv2.FONT_HERSHEY_SIMPLEX, self.font_size, self.font_color, self.font_thickness, cv2.LINE_AA)
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1, cv2.LINE_AA)
         
         resized_image = cv2.resize(cv_image, (640, 480))
         cv2.imshow('Camera 3', resized_image)
@@ -179,14 +156,12 @@ class MultiCameraSubscriber(Node):
         predict = self.model.infer(image = cv_image)
         #print(predict)
         for prediction in predict[0].predictions:
-            
             # Extrai as coordenadas e dimensões da caixa delimitadora
             x = int(prediction.x)
             y = int(prediction.y)
             width = int(prediction.width)
             height = int(prediction.height)
-            self.angle4 = self.angulo_centro(x,y)
-            print('Camera 4 - x: ', x, 'y: ', y, 'angle: ', self.angle4)            
+            
             # Calcula as coordenadas dos cantos da caixa
             top_left = (abs(int(width/2) - x), abs(int(height/2) - y))
             bottom_right = (int(width/2) + x, int(height/2) + y)
@@ -199,7 +174,7 @@ class MultiCameraSubscriber(Node):
                         
             # Desenha o texto na imagem
             cv2.putText(cv_image, label, top_left, 
-                        cv2.FONT_HERSHEY_SIMPLEX, self.font_size, self.font_color, self.font_thickness, cv2.LINE_AA)
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1, cv2.LINE_AA)
         
         resized_image = cv2.resize(cv_image, (640, 480))
         cv2.imshow('Camera 4', resized_image)

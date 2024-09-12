@@ -1,0 +1,2 @@
+[console_scripts]
+multi_camera = scripts.multi_camera_subscriber:main
