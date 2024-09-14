@@ -1,5 +1,0 @@
-float64 angle_image_1
-float64 angle_image_2
-float64 angle_image_3
-float64 angle_image_4
-
